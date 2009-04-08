@@ -52,6 +52,7 @@
 
 
 /*AREAS*/
+        .wym_skin_wildfire div                    {margin:0;}
         .wym_skin_wildfire .wym_area_left          { width: 150px; float: left;}
         .wym_skin_wildfire .wym_area_right         { width: 150px; float: right;}
         .wym_skin_wildfire .wym_area_bottom        { height: 1%; clear: both;}
