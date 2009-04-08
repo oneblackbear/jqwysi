@@ -1,4 +1,4 @@
-WYMeditor.SKINS['default'] = {
+WYMeditor.SKINS['wildfire'] = {
 
     init: function(wym) {
 
