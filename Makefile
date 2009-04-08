@@ -8,11 +8,10 @@ JS_FILES = ${SRC_DIR}/wymeditor/jquery.wymeditor.js\
  ${SRC_DIR}/wymeditor/jquery.wymeditor.safari.js
 
 WE = ${BUILD_DIR}/build/jquery.wymeditor.js
-WE_PACK = ${BUILD_DIR}/build/jquery.wymeditor.pack.js
+WE_PACK = ${SRC_DIR}/jquery.wymeditor.pack.js
 WE_MIN = ${BUILD_DIR}/build/jquery.wymeditor.min.js
 WE_ARCH = ${BUILD_DIR}/build/wymeditor.tar.gz
 
-FE = ${BUILD_DIR}/build/fireeditor.xpi
 
 MERGE = cat ${JS_FILES} | perl -pe 's/^\xEF\xBB\xBF//g' > ${WE}
 WE_PACKER = perl -I${BUILD_DIR}/packer ${BUILD_DIR}/packer/jsPacker.pl -i ${WE} -o ${WE_PACK} -e62 -f
@@ -66,13 +65,3 @@ archive: pack min
 	@@echo ${WE_ARCH} "Built"
 	@@echo
 
-fireeditor: archive
-	@@echo "Building " ${FE}
-	
-	@@cp ${WE_ARCH} ${SRC_DIR}/apps/fireeditor/content/
-	@@tar -C ${SRC_DIR}/apps/fireeditor/content -xzf ${SRC_DIR}/apps/fireeditor/content/wymeditor.tar.gz
-	@@rm ${SRC_DIR}/apps/fireeditor/content/wymeditor.tar.gz
-	@@cd ${SRC_DIR}/apps/fireeditor/; zip -r -q ../../../${FE} *
-	@@rm -rf ${SRC_DIR}/apps/fireeditor/content/wymeditor/
-	@@echo "Fire Editor built"
-	@@echo
