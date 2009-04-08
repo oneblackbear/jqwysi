@@ -8,7 +8,7 @@ JS_FILES = ${SRC_DIR}/wymeditor/jquery.wymeditor.js\
  ${SRC_DIR}/wymeditor/jquery.wymeditor.safari.js
 
 WE = ${BUILD_DIR}/build/jquery.wymeditor.js
-WE_PACK = ${SRC_DIR}/jquery.wymeditor.pack.js
+WE_PACK = ${SRC_DIR}/wymeditor/jquery.wymeditor.pack.js
 WE_MIN = ${BUILD_DIR}/build/jquery.wymeditor.min.js
 WE_ARCH = ${BUILD_DIR}/build/wymeditor.tar.gz
 
