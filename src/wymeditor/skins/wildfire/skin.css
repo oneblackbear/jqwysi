@@ -19,7 +19,7 @@
 /*TRYING TO RESET STYLES THAT MAY INTERFERE WITH WYMEDITOR*/
         .wym_skin_wildfire p, .wym_skin_wildfire h2, .wym_skin_wildfire h3,
         .wym_skin_wildfire ul, .wym_skin_wildfire li { background: transparent url(); margin: 0; padding: 0; border-width:0; list-style: none; }
-        .form_container fieldset .wym_skin_wildfire div {margin:0;}
+        .form_container fieldset .wym_skin_wildfire div {margin:0;padding:0;}
         
 
 /*HIDDEN BY DEFAULT*/
