@@ -19,7 +19,7 @@
 /*TRYING TO RESET STYLES THAT MAY INTERFERE WITH WYMEDITOR*/
         .wym_skin_wildfire p, .wym_skin_wildfire h2, .wym_skin_wildfire h3,
         .wym_skin_wildfire ul, .wym_skin_wildfire li { background: transparent url(); margin: 0; padding: 0; border-width:0; list-style: none; }
-        .form_container fieldset .wym_skin_wildfire div {margin:0;padding:0;}
+        .form_container fieldset .wym_skin_wildfire, .form_container fieldset .wym_skin_wildfire div {margin:0;padding:0;}
         
 
 /*HIDDEN BY DEFAULT*/
@@ -56,7 +56,7 @@
         .wym_skin_wildfire .wym_area_left          { width: 150px; float: left;}
         .wym_skin_wildfire .wym_area_right         { width: 150px; float: right;}
         .wym_skin_wildfire .wym_area_bottom        { height: 1%; clear: both;}
-        .wym_skin_wildfire .wym_area_top           { padding: 0;}
+        .wym_skin_wildfire .wym_area_top           { padding: 0; background:url(images/tools_bg.gif);}
  * html .wym_skin_wildfire .wym_area_main          { height: 1%;}
  * html .wym_skin_wildfire .wym_area_top           { height: 1%;}
  *+html .wym_skin_wildfire .wym_area_top           { height: 1%;}
