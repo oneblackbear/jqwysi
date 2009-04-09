@@ -35,7 +35,7 @@
 
 
 /*WYM_BOX*/
-        .wym_skin_wildfire                { border-top: 1px solid #E1E1E1; background: #fff; padding: 5px}
+        .wym_skin_wildfire                { background: #fff; padding: 5px}
 
     /*auto-clear the wym_box*/
         .wym_skin_wildfire:after 	        { content: "."; display: block; height: 0; clear: both; visibility: hidden; }
