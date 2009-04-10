@@ -20,7 +20,7 @@
 /* VISUAL FEEDBACK */
 
 /* basic */
-  body  { background: #e1e8f1;}
+  body  { background: #e1e8f1; font-family:Arial, Verdana, sans-serif;}
  
 /* make HTML blocs visible */
   p,
