@@ -4,7 +4,8 @@ WYMeditor.SKINS['wildfire'] = {
 
         //render following sections as panels
         jQuery(wym._box).find(wym._options.classesSelector)
-          .addClass("wym_panel");
+          .addClass("wym_panel")
+          .prepend("<span>&nbsp</span>");
 
         //render following sections as buttons
         jQuery(wym._box).find(wym._options.toolsSelector)
