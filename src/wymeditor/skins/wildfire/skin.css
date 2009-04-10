@@ -118,7 +118,12 @@
         .wym_skin_wildfire .wym_panel                  { padding: 0;}    
         .wym_skin_wildfire .wym_panel ul               { margin: 2px 0 5px; }        
         .wym_skin_wildfire .wym_dropdown               { padding: 0; }
-        .wym_skin_wildfire .wym_dropdown ul            { margin-left: -1px; padding:0;}
+        .wym_skin_wildfire .wym_dropdown ul            { 
+          margin-left: -1px; 
+          padding:0;
+          -webkit-box-shadow: 5px 5px 5px #aaa;
+          -moz-box-shadow: 5px 5px 5px #aaa;
+        }
         .wym_skin_wildfire .wym_dropdown a             { color:#2c5295 !important; padding:3px 8px; font-weight:normal; }
         .wym_skin_wildfire .wym_dropdown li            { background-color:#d3e3eb; border-top:1px solid #e6eef4;border-bottom:1px solid #c0d5e2; }
         
