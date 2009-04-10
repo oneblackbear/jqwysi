@@ -113,7 +113,7 @@
 
 /*DECORATION*/
         .wym_skin_wildfire .wym_section h2             { background: #ddd url(images/styling_bg.gif); border-bottom:1px solid #bdbdbd;}
-        .wym_skin_wildfire .wym_section h2 span        { background: #ddd url(images/styling_closed.gif) no-repeat; width:10px;height:10px;}
+        .wym_skin_wildfire .wym_section h2 span        { display:block;background: #ddd url(images/styling_closed.gif) no-repeat left center; width:15px;height:15px;margin-right:3px;}
         .wym_skin_wildfire .wym_panel                  { padding: 0;}    
         .wym_skin_wildfire .wym_panel ul               { margin: 2px 0 5px; }        
         .wym_skin_wildfire .wym_dropdown               { padding: 0; }
