@@ -118,7 +118,8 @@
         .wym_skin_wildfire .wym_panel                  { padding: 0;}    
         .wym_skin_wildfire .wym_panel ul               { margin: 2px 0 5px; }        
         .wym_skin_wildfire .wym_dropdown               { padding: 0; }
-        .wym_skin_wildfire .wym_dropdown ul            {margin-left: -1px; padding: 5px 10px 5px 3px;}
+        .wym_skin_wildfire .wym_dropdown ul            { margin-left: -1px; padding: 5px 10px 5px 3px;}
+        .wym_skin_wildfire .wym_dropdown a             { color:#2c5295;}
         
 /*DIALOGS*/
         .wym_dialog div.row         { margin-bottom: 5px;}
