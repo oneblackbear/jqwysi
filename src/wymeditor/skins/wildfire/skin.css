@@ -120,7 +120,7 @@
         .wym_skin_wildfire .wym_dropdown               { padding: 0; }
         .wym_skin_wildfire .wym_dropdown ul            { margin-left: -1px; padding:0;}
         .wym_skin_wildfire .wym_dropdown a             { color:#2c5295 !important; padding:3px 8px; font-weight:normal; }
-        .wym_skin_wildfire .wym_dropdown li            { background-color:#d3e3eb; }
+        .wym_skin_wildfire .wym_dropdown li            { background-color:#d3e3eb; border-top:1px solid #e6eef4;border-bottom:1px solid #c0d5e2; }
         
 /*DIALOGS*/
         .wym_dialog div.row         { margin-bottom: 5px;}
