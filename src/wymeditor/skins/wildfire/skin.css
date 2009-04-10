@@ -28,7 +28,7 @@
 
 
 /*TYPO*/    
-        .wym_skin_wildfire                { font-size: 100%; font-family: Verdana, Arial, sans-serif; }
+        .wym_skin_wildfire                { font-size: 100%; font-family: Arial, Verdana, sans-serif; }
         .wym_skin_wildfire h2             { font-size: 100%; color:#6e6e6e; /* = 11px */}
         .wym_skin_wildfire h3             { font-size: 100%; /* = 10px */}
         .wym_skin_wildfire li             { font-size: 100%; /* = 10px */}
@@ -118,8 +118,8 @@
         .wym_skin_wildfire .wym_panel                  { padding: 0;}    
         .wym_skin_wildfire .wym_panel ul               { margin: 2px 0 5px; }        
         .wym_skin_wildfire .wym_dropdown               { padding: 0; }
-        .wym_skin_wildfire .wym_dropdown ul            { margin-left: -1px; padding: 5px 10px 5px 3px;}
-        .wym_skin_wildfire .wym_dropdown a             { color:#2c5295 !important; padding:3px 8px; }
+        .wym_skin_wildfire .wym_dropdown ul            { margin-left: -1px; padding:0;}
+        .wym_skin_wildfire .wym_dropdown a             { color:#2c5295 !important; padding:3px 8px; font-weight:normal; }
         .wym_skin_wildfire .wym_dropdown li            { background-color:#d3e3eb; }
         
 /*DIALOGS*/
