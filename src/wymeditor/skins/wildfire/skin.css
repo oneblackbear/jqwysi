@@ -114,10 +114,10 @@
 /*DECORATION*/
         .wym_skin_wildfire .wym_section h2             { background: #ddd url(images/styling_bg.gif); border-bottom:1px solid #bdbdbd;}
         .wym_skin_wildfire .wym_section h2 span        { color: gray; display:none;}
-        .wym_skin_wildfire .wym_panel                  { padding: 0; border: solid gray; border-width: 1px; background: white;}    
+        .wym_skin_wildfire .wym_panel                  { padding: 0;}    
         .wym_skin_wildfire .wym_panel ul               { margin: 2px 0 5px; }        
         .wym_skin_wildfire .wym_dropdown               { padding: 0; }
-        .wym_skin_wildfire .wym_dropdown ul            { border: solid gray; border-width: 0 1px 1px 1px; margin-left: -1px; padding: 5px 10px 5px 3px;}
+        .wym_skin_wildfire .wym_dropdown ul            {margin-left: -1px; padding: 5px 10px 5px 3px;}
         
 /*DIALOGS*/
         .wym_dialog div.row         { margin-bottom: 5px;}
