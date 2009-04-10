@@ -29,7 +29,7 @@
 
 /*TYPO*/    
         .wym_skin_wildfire                { font-size: 100%; font-family: Verdana, Arial, sans-serif; }
-        .wym_skin_wildfire h2             { font-size: 110%; /* = 11px */}
+        .wym_skin_wildfire h2             { font-size: 100%; color:#6e6e6e; /* = 11px */}
         .wym_skin_wildfire h3             { font-size: 100%; /* = 10px */}
         .wym_skin_wildfire li             { font-size: 100%; /* = 10px */}
 
