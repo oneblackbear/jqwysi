@@ -8,7 +8,9 @@
  */
 
 //Extend WYMeditor
-WYMeditor.editor.prototype.wildfire = function(wym) {
+WYMeditor.editor.prototype.wildfire = function() {
+  var wym = this;
+  
   $(".wym_tools_superscript").remove();
   $(".wym_tools_subscript").remove();
   $(".wym_tools_preview").remove();
@@ -89,7 +91,7 @@ function wym_button(name, title) {
 
 
 function initialise_inline_image_edit(wym) {
-  wym.contents().find(".inline_image").each(function(){
+  wym._wym._box.find(".inline_image").each(function(){
     alert("found one");
   });
   wym.find(".inline_image").dblclick(function(){
