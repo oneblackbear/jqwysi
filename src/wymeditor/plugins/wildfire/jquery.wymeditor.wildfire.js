@@ -89,6 +89,7 @@ function wym_button(name, title) {
 
 
 function initialise_inline_image_edit(wym) {
+  alert("running");
   wym.find(".inline_image").css("border", "1px solid red");
   wym.find(".inline_image").dblclick(function(){
     image_to_edit = $(this);
