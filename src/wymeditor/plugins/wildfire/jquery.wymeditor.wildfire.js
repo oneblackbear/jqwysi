@@ -89,7 +89,9 @@ function wym_button(name, title) {
 
 
 function initialise_inline_image_edit(wym) {
-  wym.contents().find(".inline_image").css("border", "1px solid red");
+  wym.contents().find(".inline_image").each(function(){
+    alert("found one");
+  });
   wym.find(".inline_image").dblclick(function(){
     image_to_edit = $(this);
     var image_browser = '<div id="inline_image_browser" class="inline_edit_existing"><div id="inline_close_bar"><h3>Edit Image</h3><a id="inline_close" href="#">x</a></div></div>';
