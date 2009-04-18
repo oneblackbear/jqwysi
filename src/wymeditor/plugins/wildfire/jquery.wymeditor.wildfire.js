@@ -160,7 +160,7 @@ function init_inline_image_select() {
   $("#image_display div .add_image,#image_display div .edit_image,#image_display div .url_image").remove();
   $("#image_display div img").click(function(){
     $("#image_meta input").removeAttr("disabled");
-    $("#selected_image img").attr("src", "/show_image/"+$(this).parent().attr("id")+"/90.jpg");
+    $("#selected_image img").attr("src", "/show_image/"+$(this).parent().parent().attr("id")+"/90.jpg");
     $("#inline_insert .generic_button a").click(function(){
       if($("#flow_normal input").attr("checked")) var img_class = "inline_image flow_normal";
       if($("#flow_left input").attr("checked")) var img_class = "inline_image flow_left";
