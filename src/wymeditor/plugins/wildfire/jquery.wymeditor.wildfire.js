@@ -91,6 +91,7 @@ function wym_button(name, title) {
 
 
 function initialise_inline_image_edit(wym) {
+  alert(wym.html());
   wym._wym.find(".inline_image").each(function(){
     alert("found one");
   });
