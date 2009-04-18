@@ -111,7 +111,7 @@ function initialise_inline_image_edit(wym) {
         if($("#flow_right input").attr("checked")) var img_class = "inline_image flow_right";
         var img_html= '<img style="" src="'+$("#selected_image img").attr("src")+'" class="'+img_class+'" alt="'+$("#meta_description").val()+'" />';
         if($("#inline_image_link").val().length > 1) img_html = '<a href="'+$("#inline_image_link").val()+'">'+img_html+"</a>";
-        theIframe.contentWindow.document.execCommand("inserthtml", false, img_html);
+        wym._exec("inserthtml", img_html);
     		$("#inline_image_browser").remove(); return false;
     		initialise_inline_image_edit();
       });
@@ -167,7 +167,8 @@ function init_inline_image_select(wym) {
       if($("#flow_right input").attr("checked")) var img_class = "inline_image flow_right";
       var img_html= '<img style="" src="'+$("#selected_image img").attr("src")+'" class="'+img_class+'" alt="'+$("#meta_description").val()+'" />';
       if($("#inline_image_link").val().length > 1) img_html = '<a href="'+$("#inline_image_link").val()+'">'+img_html+"</a>";
-      wym._exec("inserthtml", false, img_html);
+      alert(img_html);
+      wym._exec("inserthtml", img_html);
   		$("#inline_image_browser").remove(); 
   		initialise_inline_image_edit(wym);
   		return false;
