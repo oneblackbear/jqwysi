@@ -73,9 +73,9 @@ WYMeditor.editor.prototype.wildfire = function(wym) {
   /*******************************************/
   $(".wym_tools_image a").unbind("click");
   $(".wym_tools_image a").click(function(){
-    show_inline_image_browser();
+    show_inline_image_browser(wym);
   });
-  
+  initialise_inline_image_edit(wym);
   
 };
 
@@ -88,8 +88,8 @@ function wym_button(name, title) {
 }
 
 
-function initialise_inline_image_edit() {
-  $("#cms_content_contentWidgIframe").contents().find(".inline_image").dblclick(function(){
+function initialise_inline_image_edit(wym) {
+  wym.find(".inline_image").dblclick(function(){
     image_to_edit = $(this);
     var image_browser = '<div id="inline_image_browser" class="inline_edit_existing"><div id="inline_close_bar"><h3>Edit Image</h3><a id="inline_close" href="#">x</a></div></div>';
     $("body").append(image_browser);
