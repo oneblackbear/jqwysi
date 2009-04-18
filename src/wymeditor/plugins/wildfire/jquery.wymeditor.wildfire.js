@@ -8,7 +8,7 @@
  */
 
 //Extend WYMeditor
-WYMeditor.editor.prototype.wildfire = function(options) {
+WYMeditor.editor.prototype.wildfire = function(wym) {
   $(".wym_tools_superscript").remove();
   $(".wym_tools_subscript").remove();
   $(".wym_tools_preview").remove();
