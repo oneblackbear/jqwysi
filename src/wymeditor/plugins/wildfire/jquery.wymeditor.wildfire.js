@@ -157,6 +157,7 @@ function show_inline_image_browser() {
 function init_inline_image_select() {  
   $("#image_display .edit_img").remove();
   $("#image_display div img").hover(function(){$(this).css("border", "2px solid #222");}, function(){ $(this).css("border","2px solid white");} );
+  $("#image_display div .add_image,#image_display div .remove_image,#image_display div .url_image").remove();
   $("#image_display div img").click(function(){
     $("#image_meta input").removeAttr("disabled");
     $("#selected_image img").attr("src", "/show_image/"+$(this).parent().attr("id")+"/90.jpg");
