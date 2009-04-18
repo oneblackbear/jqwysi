@@ -91,6 +91,7 @@ function wym_button(name, title) {
 
 
 function initialise_inline_image_edit(wym) {
+  wym.css("border", "1px solid pink");
   wym.find(".inline_image").each(function(){
     alert("found one");
   });
