@@ -117,8 +117,9 @@ function initialise_inline_image_edit(wym) {
         var img_html= '<img style="" src="'+$("#selected_image img").attr("src")+'" class="'+img_class+'" alt="'+$("#meta_description").val()+'" />';
         if($("#inline_image_link").val().length > 1) img_html = '<a href="'+$("#inline_image_link").val()+'">'+img_html+"</a>";
         image_to_edit.replaceWith(img_html);
-    		$("#inline_image_browser").remove(); return false;
+    		$("#inline_image_browser").remove(); 
     		initialise_inline_image_edit(wym);
+    		return false;
       });
     });
   });
