@@ -100,6 +100,7 @@ function initialise_inline_image_edit(wym) {
     $("#inline_close").click(function(){
       $("#inline_image_browser").remove(); return false;
     });
+    alert($(this).html());
     $.get("/admin/files/inline_image_edit", function(response){
       $("#inline_image_browser").append(response);
       $("#selected_image img").attr("src", image_to_edit.attr("src")).css("width", "90px");
@@ -115,7 +116,7 @@ function initialise_inline_image_edit(wym) {
         var img_html= '<img style="" src="'+$("#selected_image img").attr("src")+'" class="'+img_class+'" alt="'+$("#meta_description").val()+'" />';
         if($("#inline_image_link").val().length > 1) img_html = '<a href="'+$("#inline_image_link").val()+'">'+img_html+"</a>";
         alert(img_html);
-        wym._exec("inserthtml", img_html);
+        wym.insert(img_html);
     		$("#inline_image_browser").remove(); return false;
     		initialise_inline_image_edit();
       });
