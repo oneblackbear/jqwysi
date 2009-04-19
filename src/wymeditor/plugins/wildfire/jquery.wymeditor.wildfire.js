@@ -98,9 +98,10 @@ function initialise_inline_image_edit(wym) {
     $("body").append(image_browser);
     $("#inline_image_browser").centerScreen();
     $("#inline_close").click(function(){
-      $("#inline_image_browser").remove(); return false;
+      $("#inline_image_browser").remove();
+      initialise_inline_image_edit(); 
+      return false;
     });
-    alert($(this).html());
     $.get("/admin/files/inline_image_edit", function(response){
       $("#inline_image_browser").append(response);
       $("#selected_image img").attr("src", image_to_edit.attr("src")).css("width", "90px");
@@ -115,8 +116,7 @@ function initialise_inline_image_edit(wym) {
         if($("#flow_right input").attr("checked")) var img_class = "inline_image flow_right";
         var img_html= '<img style="" src="'+$("#selected_image img").attr("src")+'" class="'+img_class+'" alt="'+$("#meta_description").val()+'" />';
         if($("#inline_image_link").val().length > 1) img_html = '<a href="'+$("#inline_image_link").val()+'">'+img_html+"</a>";
-        alert(img_html);
-        wym.insert(img_html);
+        image_to_edit.replaceWith(img_html);
     		$("#inline_image_browser").remove(); return false;
     		initialise_inline_image_edit();
       });
