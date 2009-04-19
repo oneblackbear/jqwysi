@@ -99,7 +99,7 @@ function initialise_inline_image_edit(wym) {
     $("#inline_image_browser").centerScreen();
     $("#inline_close").click(function(){
       $("#inline_image_browser").remove();
-      initialise_inline_image_edit(); 
+      initialise_inline_image_edit(wym); 
       return false;
     });
     $.get("/admin/files/inline_image_edit", function(response){
@@ -118,7 +118,7 @@ function initialise_inline_image_edit(wym) {
         if($("#inline_image_link").val().length > 1) img_html = '<a href="'+$("#inline_image_link").val()+'">'+img_html+"</a>";
         image_to_edit.replaceWith(img_html);
     		$("#inline_image_browser").remove(); return false;
-    		initialise_inline_image_edit();
+    		initialise_inline_image_edit(wym);
       });
     });
   });
