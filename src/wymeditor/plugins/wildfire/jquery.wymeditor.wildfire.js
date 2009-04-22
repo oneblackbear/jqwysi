@@ -46,18 +46,17 @@ WYMeditor.editor.prototype.wildfire = function() {
   $(".wym_tools_paste a").unbind("click");
   $(".wym_tools_paste a").click(function(){
     pasteHtml= "<form>"
-               +"<input type='hidden' class='wym_dialog_type' value='' />"
                + "<fieldset>"
                + "<div class='row'>"
                + "<textarea class='wym_text' rows='10' cols='50'></textarea>"
                + "</div>"
                + "<div class='row'>"
                + "<input class='wym_submit' type='button' value='Submit' />"
-               + "<input class='wym_cancel' type='button' value='Cancel' />"
                + "</div>"
                + "</fieldset>"
                + "</form>";
     $('<div id="paste_word">'+pasteHtml+'</div>').dialog({title:"Paste From Word",width:700}).dialog("open");
+    $(".wym_submit").click(function(){wym.insert($(this).val());});
   });
   
   
