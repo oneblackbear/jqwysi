@@ -47,12 +47,12 @@ WYMeditor.editor.prototype.wildfire = function() {
   $(".wym_tools_paste a").click(function(){
     pasteHtml= "<form>"
                + "<fieldset>"
-               + "<textarea class='wym_text' rows='10' cols='50'></textarea>"
+               + "<textarea class='wym_text' rows='10' cols='50'></textarea><br />"
                + "<input class='wym_submit' type='button' value='Submit' />"
                + "</fieldset>"
                + "</form>";
     $('<div id="paste_word">'+pasteHtml+'</div>').dialog({title:"Paste From Word",width:700}).dialog("open");
-    $(".wym_submit").click(function(){wym.insert($(this).val()); $("#paste_word").dialog("close");});
+    $(".wym_submit").click(function(){wym.insert($(".wym_text").val()); $("#paste_word").dialog("close");});
   });
   
   
