@@ -41,6 +41,15 @@ WYMeditor.editor.prototype.wildfire = function() {
   });
   
   /*******************************************/
+  /* Overwrite default paste from word */
+  /*******************************************/
+  $(".wym_tools_paste a").unbind("click");
+  $(".wym_tools_paste a").click(function(){
+    $("<div id='paste_word'></div>").dialog({title:"Paste From Word",width:700}).dialog("open");
+  });
+  
+  
+  /*******************************************/
   /* Video Insertion Button */
   /*******************************************/
   
