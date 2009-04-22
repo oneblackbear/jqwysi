@@ -56,7 +56,7 @@ WYMeditor.editor.prototype.wildfire = function() {
                + "</fieldset>"
                + "</form>";
     $('<div id="paste_word">'+pasteHtml+'</div>').dialog({title:"Paste From Word",width:700}).dialog("open");
-    $(".wym_submit").click(function(){wym.insert($(this).val());});
+    $(".wym_submit").click(function(){wym.insert($(this).val()); $("#paste_word").dialog("close");});
   });
   
   
