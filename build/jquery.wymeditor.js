@@ -1881,10 +1881,10 @@ WYMeditor.XhtmlValidator = {
         "2":"href",
         "3":"hreflang",
         "4":"name",
-        "rel":/^(alternate|designates|stylesheet|start|next|prev|contents|index|glossary|copyright|chapter|section|subsection|appendix|help|bookmark| |shortcut|icon)+$/,
+        "5":"rel",
         "rev":/^(alternate|designates|stylesheet|start|next|prev|contents|index|glossary|copyright|chapter|section|subsection|appendix|help|bookmark| |shortcut|icon)+$/,
         "shape":/^(rect|rectangle|circ|circle|poly|polygon)$/,
-        "5":"type"
+        "6":"type"
       }
     },
     "0":"abbr",
