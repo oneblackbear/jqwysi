@@ -95,6 +95,15 @@ WYMeditor.editor.prototype.wildfire = function() {
   });
   initialise_inline_image_edit(wym);
   
+  /*******************************************/
+  /* Table Insertion Button */
+  /*******************************************/
+  $(".wym_tools_table a").unbind("click");
+  $(".wym_tools_table a").click(function(){
+    $("#table_dialog").dialog("open");
+  });
+
+  
 };
 
 function wym_button(name, title) {
