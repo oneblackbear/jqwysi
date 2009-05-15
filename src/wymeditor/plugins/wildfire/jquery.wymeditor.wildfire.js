@@ -101,7 +101,7 @@ WYMeditor.editor.prototype.wildfire = function() {
   $(".wym_tools_table a").unbind("click");
   $(".wym_tools_table a").click(function(){
     $("#table_dialog").dialog("open");
-    $("#insert_table_button").click(function(){
+    $("#table_dialog .wym_submit").click(function(){
       alert("CLICKED");
       var sCaption = $(".wym_caption").val();
       var sSummary = $(".wym_summary").val();
