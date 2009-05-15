@@ -102,7 +102,6 @@ WYMeditor.editor.prototype.wildfire = function() {
   $(".wym_tools_table a").click(function(){
     $("#table_dialog").dialog("open");
     $("#insert_table_button").click(function(){
-      alert("CLICKED");
       var sCaption = $(".wym_caption").val();
       var sSummary = $(".wym_summary").val();
       var iRows = $(".wym_rows").val();
@@ -120,10 +119,8 @@ WYMeditor.editor.prototype.wildfire = function() {
 		    }
         //set the summary attr
         jQuery(table).attr('summary', sSummary);
-        alert($(table).html());
-        return false;
       }
-      wym._exec('inserthtml', "<a href='"+url+"' rel='"+width+"px:"+height+"px'>LOCAL:"+local+"</a>");
+      wym._exec('inserthtml', table);
       $("#table_dialog").dialog("close");
     });
   });
