@@ -120,7 +120,7 @@ WYMeditor.editor.prototype.wildfire = function() {
         //set the summary attr
         jQuery(table).attr('summary', sSummary);
       }
-      wym._exec('inserthtml', jQuery(table).html());
+      wym._exec('inserthtml', $('<div>').append($(table).clone()).remove().html());
       $("#table_dialog").dialog("close");
     });
   });
