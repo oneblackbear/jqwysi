@@ -101,31 +101,34 @@ WYMeditor.editor.prototype.wildfire = function() {
   $(".wym_tools_table a").unbind("click");
   $(".wym_tools_table a").click(function(){
     $("#table_dialog").dialog("open");
-    $("#table_dialog .wym_submit").click(function(){
-      alert("CLICKED");
-      var sCaption = $(".wym_caption").val();
-      var sSummary = $(".wym_summary").val();
-      var iRows = $(".wym_rows").val();
-      var iCols = $(".wym_cols").val();
-      if(iRows > 0 && iCols > 0) {
-        var table = wym._doc.createElement(WYMeditor.TABLE);
-        var newRow = null;
-		    var newCol = null;
-		    var sCaption = jQuery(wym._options.captionSelector).val();
-		    var newCaption = table.createCaption();
-		    newCaption.innerHTML = sCaption;
-        for(x=0; x<iRows; x++) {
-			    newRow = table.insertRow(x);
-			    for(y=0; y<iCols; y++) {newRow.insertCell(y);}
-		    }
-        //set the summary attr
-        jQuery(table).attr('summary', sSummary);
-        alert($(table).html());
-        return false;
-      }
-      wym._exec('inserthtml', "<a href='"+url+"' rel='"+width+"px:"+height+"px'>LOCAL:"+local+"</a>");
-      $("#table_dialog").dialog("close");
+    $("#table_dialog").bind("dialogopen",function(){
+      $("#table_dialog .wym_submit").click(function(){
+        alert("CLICKED");
+        var sCaption = $(".wym_caption").val();
+        var sSummary = $(".wym_summary").val();
+        var iRows = $(".wym_rows").val();
+        var iCols = $(".wym_cols").val();
+        if(iRows > 0 && iCols > 0) {
+          var table = wym._doc.createElement(WYMeditor.TABLE);
+          var newRow = null;
+  		    var newCol = null;
+  		    var sCaption = jQuery(wym._options.captionSelector).val();
+  		    var newCaption = table.createCaption();
+  		    newCaption.innerHTML = sCaption;
+          for(x=0; x<iRows; x++) {
+  			    newRow = table.insertRow(x);
+  			    for(y=0; y<iCols; y++) {newRow.insertCell(y);}
+  		    }
+          //set the summary attr
+          jQuery(table).attr('summary', sSummary);
+          alert($(table).html());
+          return false;
+        }
+        wym._exec('inserthtml', "<a href='"+url+"' rel='"+width+"px:"+height+"px'>LOCAL:"+local+"</a>");
+        $("#table_dialog").dialog("close");
+      });
     });
+    
   });
 
   
