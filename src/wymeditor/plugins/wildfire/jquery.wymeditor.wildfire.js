@@ -28,6 +28,7 @@ WYMeditor.editor.prototype.wildfire = function() {
       if (theURL != null) { 
         wym._exec('CreateLink', theURL);
         $("#link_dialog").dialog("close");
+        return true;
       }
     });
     $("#insert_local_url").click(function(){
@@ -189,6 +190,7 @@ function inline_image_filter_post(wym){
 }
 
 function show_inline_image_browser(wym) {
+  var wym = wym;
   var image_browser = '<div id="inline_image_browser"><div id="inline_close_bar"><h3>Insert Image</h3><a id="inline_close" href="#">x</a></div></div>';
   $("body").append(image_browser);
   $("#inline_image_browser").centerScreen();
