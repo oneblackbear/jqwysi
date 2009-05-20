@@ -64,6 +64,7 @@ WYMeditor.editor.prototype.wildfire = function() {
   var vidhtml = wym_button("video", "Insert a Video");
   $(wym._box).find(".wym_tools_image").after(vidhtml);
   $(".wym_tools_video a").click(function(){
+    alert("TRIGGER");
     $("#video_dialog").dialog("open");
     $("#insert_video_button").click(function(){
       var url = $("#vid_id").val();
