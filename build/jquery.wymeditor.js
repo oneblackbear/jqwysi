@@ -1985,6 +1985,17 @@ WYMeditor.XhtmlValidator = {
     "13":"dl",
     "14":"dt",
     "15":"em",
+    "embed":
+    {
+      "attributes":[
+      "allowscriptaccess",
+      "allowfullscreen",
+      "height",
+      "src",
+      "type",
+      "width"
+      ]
+    },
     "fieldset":
     {
       "inside":"form"
@@ -2160,10 +2171,11 @@ WYMeditor.XhtmlValidator = {
     {
       "attributes":
       {
-        "0":"type",
+        "0":"name",
+        "1":"type",
         "valuetype":/^(data|ref|object)$/,
-        "1":"valuetype",
-        "2":"value"
+        "2":"valuetype",
+        "3":"value"
       },
       "required":[
       "name"
@@ -3368,7 +3380,7 @@ WYMeditor.XhtmlSaxListener = function()
     this.block_tags = ["a", "abbr", "acronym", "address", "area", "b",
     "base", "bdo", "big", "blockquote", "body", "button",
     "caption", "cite", "code", "col", "colgroup", "dd", "del", "div",
-    "dfn", "dl", "dt", "em", "fieldset", "form", "head", "h1", "h2",
+    "dfn", "dl", "dt", "em","embed", "fieldset", "form", "head", "h1", "h2",
     "h3", "h4", "h5", "h6", "html", "i", "ins",
     "kbd", "label", "legend", "li", "map", "noscript",
     "object", "ol", "optgroup", "option", "p", "param", "pre", "q",
@@ -4089,10 +4101,10 @@ WYMeditor.WymClassMozilla.prototype.html = function(html) {
     
     //replace em by i and strong by bold
     //(designMode issue)
-    html = html.replace(/<em([^>]*)>/gi, "<i$1>")
-      .replace(/<\/em>/gi, "</i>")
-      .replace(/<strong([^>]*)>/gi, "<b$1>")
-      .replace(/<\/strong>/gi, "</b>");
+    // html = html.replace(/<em([^>]*)>/gi, "<i$1>")
+    //       .replace(/<\/em>/gi, "</i>")
+    //       .replace(/<strong([^>]*)>/gi, "<b$1>")
+    //       .replace(/<\/strong>/gi, "</b>");
     
     //update the html body
     jQuery(this._doc.body).html(html);
