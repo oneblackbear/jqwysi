@@ -3380,7 +3380,7 @@ WYMeditor.XhtmlSaxListener = function()
     this.block_tags = ["a", "abbr", "acronym", "address", "area", "b",
     "base", "bdo", "big", "blockquote", "body", "button",
     "caption", "cite", "code", "col", "colgroup", "dd", "del", "div",
-    "dfn", "dl", "dt", "em","embed", "fieldset", "form", "head", "h1", "h2",
+    "dfn", "dl", "dt", "em", "fieldset", "form", "head", "h1", "h2",
     "h3", "h4", "h5", "h6", "html", "i", "ins",
     "kbd", "label", "legend", "li", "map", "noscript",
     "object", "ol", "optgroup", "option", "p", "param", "pre", "q",
@@ -4101,10 +4101,9 @@ WYMeditor.WymClassMozilla.prototype.html = function(html) {
     
     //replace em by i and strong by bold
     //(designMode issue)
-    // html = html.replace(/<em([^>]*)>/gi, "<i$1>")
-    //       .replace(/<\/em>/gi, "</i>")
-    //       .replace(/<strong([^>]*)>/gi, "<b$1>")
-    //       .replace(/<\/strong>/gi, "</b>");
+    html = html.replace(/<em(\b[^>]*)>/gi, "<i$1>").replace(/<\/em>/gi, "</i>")
+      .replace(/<strong(\b[^>]*)>/gi, "<b$1>")
+      .replace(/<\/strong>/gi, "</b>");
     
     //update the html body
     jQuery(this._doc.body).html(html);
