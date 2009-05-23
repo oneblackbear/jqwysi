@@ -3389,7 +3389,7 @@ WYMeditor.XhtmlSaxListener = function()
     "thead", "title", "tr", "tt", "ul", "var", "extends"];
 
 
-    this.inline_tags = ["br", "hr", "img", "input", "embed"];
+    this.inline_tags = ["br", "hr", "img", "input", "embed", "param"];
 
     return this;
 };
