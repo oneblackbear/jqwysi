@@ -204,7 +204,7 @@ function show_inline_image_browser(wym) {
     $("#inline_image_browser #filter_field").keyup(function(e) {
 			if (e.which == 8 || e.which == 32 || (65 <= e.which && e.which <= 65 + 25) || (97 <= e.which && e.which <= 97 + 25) || e.which == 160 || e.which == 127) {
 				clearTimeout(inline_image_filter_timer);
-				inline_image_filter_timer = setTimeout("inline_image_filter_post(wym)", 800);
+				inline_image_filter_timer = setTimeout(function(){inline_image_filter_post(wym);}, 800);
 			}
     });
   });
