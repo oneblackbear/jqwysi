@@ -1993,7 +1993,8 @@ WYMeditor.XhtmlValidator = {
       "height",
       "src",
       "type",
-      "width"
+      "width",
+      "flashvars"
       ]
     },
     "fieldset":
