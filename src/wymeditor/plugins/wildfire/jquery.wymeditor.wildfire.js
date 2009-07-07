@@ -21,23 +21,23 @@ WYMeditor.editor.prototype.wildfire = function() {
   /*******************************************/
   
   $(".wym_tools_link a").unbind("click");
+  $("#insert_web_url").click(function(){
+    var theURL = prompt("Enter the URL for this link:", "http://");
+    if (theURL != null) { 
+      wym._exec('CreateLink', theURL);
+      $("#link_dialog").dialog("close");
+      return true;
+    }
+  });
+  $("#insert_local_url").click(function(){
+    theURL = $("#link_file").val();
+    if (theURL != null) { 
+      wym._exec('CreateLink', theURL);
+      $("#link_dialog").dialog("close");
+    }
+  });
   $(".wym_tools_link a").click(function(){
     $("#link_dialog").dialog("open");
-    $("#insert_web_url").click(function(){
-      var theURL = prompt("Enter the URL for this link:", "http://");
-      if (theURL != null) { 
-        wym._exec('CreateLink', theURL);
-        $("#link_dialog").dialog("close");
-        return true;
-      }
-    });
-    $("#insert_local_url").click(function(){
-      theURL = $("#link_file").val();
-      if (theURL != null) { 
-        wym._exec('CreateLink', theURL);
-        $("#link_dialog").dialog("close");
-      }
-    });
     return false;
   });
   
