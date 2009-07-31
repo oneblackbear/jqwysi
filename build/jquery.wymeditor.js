@@ -203,10 +203,10 @@ jQuery.extend(WYMeditor, {
 	INSERT_UNORDEREDLIST : "InsertUnorderedList",
 	INSERT_ORDEREDLIST	 : "InsertOrderedList",
 
-    MAIN_CONTAINERS : new Array("p","h1","h2","h3","h4","h5","h6","pre","blockquote"),
+    MAIN_CONTAINERS : new Array("p","h3","h4","h5","h6","pre","blockquote", "address"),
 
     BLOCKS : new Array("address", "blockquote", "div", "dl",
-	   "fieldset", "form", "h1", "h2", "h3", "h4", "h5", "h6", "hr",
+	   "fieldset", "form", "h3", "h4", "h5", "h6", "hr",
 	   "noscript", "ol", "p", "pre", "table", "ul", "dd", "dt",
 	   "li", "tbody", "td", "tfoot", "th", "thead", "tr"),
 
@@ -438,16 +438,13 @@ jQuery.fn.wymeditor = function(options) {
                         + "</a></li>",
                         
     containersItems: [
-        {'name': 'P', 'title': 'Paragraph', 'css': 'wym_containers_p'},
-        {'name': 'H1', 'title': 'Heading_1', 'css': 'wym_containers_h1'},
-        {'name': 'H2', 'title': 'Heading_2', 'css': 'wym_containers_h2'},
-        {'name': 'H3', 'title': 'Heading_3', 'css': 'wym_containers_h3'},
-        {'name': 'H4', 'title': 'Heading_4', 'css': 'wym_containers_h4'},
-        {'name': 'H5', 'title': 'Heading_5', 'css': 'wym_containers_h5'},
-        {'name': 'H6', 'title': 'Heading_6', 'css': 'wym_containers_h6'},
+        {'name': 'P', 'title': 'Paragraph', 'css': 'wym_containers_p'},        
+        {'name': 'H3', 'title': 'Main_Heading', 'css': 'wym_containers_h3'},
+        {'name': 'H4', 'title': 'Sub_Heading', 'css': 'wym_containers_h4'},
+        {'name': 'H5', 'title': 'Small_Heading', 'css': 'wym_containers_h5'},
         {'name': 'PRE', 'title': 'Preformatted', 'css': 'wym_containers_pre'},
-        {'name': 'BLOCKQUOTE', 'title': 'Blockquote',
-            'css': 'wym_containers_blockquote'},
+        {'name': 'BLOCKQUOTE', 'title': 'Blockquote','css': 'wym_containers_blockquote'},
+        {'name': 'ADDRESS', 'title': 'Address','css': 'wym_containers_p'},
         {'name': 'TH', 'title': 'Table_Header', 'css': 'wym_containers_th'}
     ],
 
