@@ -40,6 +40,10 @@ WYMeditor.STRINGS['en'] = {
     Containers:       'Headings',
     Classes:          'Styles',
     Status:           'Status',
-    Source_Code:      'Source code'
+    Source_Code:      'Source code',
+    Main_Heading:     'Main Heading',
+    Sub_Heading:      'Sub Heading',
+    Small_Heading:    'Small Heading',
+    Address:          'Address'
 };
 
