@@ -20,7 +20,7 @@ WYMeditor.editor.prototype.wildfire = function() {
   /* Overwrite default link insert */
   /*******************************************/
   
-  $(".wym_tools_link a").unbind("click");
+  $(".wym_tools_link a, .insert_web_url,.insert_local_url").unbind("click");
   $(".insert_web_url").click(function(){
     var theURL = prompt("Enter the URL for this link:", "http://");
     if (theURL != null) { 
