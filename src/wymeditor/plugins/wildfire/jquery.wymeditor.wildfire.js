@@ -21,7 +21,7 @@ WYMeditor.editor.prototype.wildfire = function() {
   /*******************************************/
   
   jQuery(wym._box).find(".wym_tools_link a").unbind("click");
-  jQuery(wym._box).find(".insert_web_url").click(function(){
+  jQuery(".insert_web_url").click(function(){
     var theURL = prompt("Enter the URL for this link:", "http://");
     if (theURL != null) { 
       wym._exec('CreateLink', theURL);
@@ -29,7 +29,7 @@ WYMeditor.editor.prototype.wildfire = function() {
       return true;
     }
   });
-  jQuery(wym._box).find(".insert_local_url").click(function(){
+  jQuery(".insert_local_url").click(function(){
     theURL = jQuery("#link_file").val();
     if (theURL != null) { 
       wym._exec('CreateLink', theURL);
