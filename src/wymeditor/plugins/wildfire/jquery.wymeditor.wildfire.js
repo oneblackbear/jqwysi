@@ -21,24 +21,24 @@ WYMeditor.editor.prototype.wildfire = function() {
   /*******************************************/
   
   jQuery(wym._box).find(".wym_tools_link a").unbind("click");
-  jQuery(".insert_web_url").unbind("click");
-  jQuery(".insert_web_url").click(function(){
-    var theURL = prompt("Enter the URL for this link:", "http://");
-    if (theURL != null) { 
-      wym._exec('CreateLink', theURL);
-      jQuery("#link_dialog").dialog("close");
-      return true;
-    }
-  });
-  jQuery(".insert_local_url").unbind("click");  
-  jQuery(".insert_local_url").click(function(){
-    theURL = jQuery("#link_file").val();
-    if (theURL != null) { 
-      wym._exec('CreateLink', theURL);
-      jQuery("#link_dialog").dialog("close");
-    }
-  });
   jQuery(wym._box).find(".wym_tools_link a").click(function(){
+	  jQuery(".insert_web_url").unbind("click");
+	  jQuery(".insert_web_url").click(function(){
+	    var theURL = prompt("Enter the URL for this link:", "http://");
+	    if (theURL != null) { 
+	      wym._exec('CreateLink', theURL);
+	      jQuery("#link_dialog").dialog("close");
+	      return true;
+	    }
+	  });
+	  jQuery(".insert_local_url").unbind("click");  
+	  jQuery(".insert_local_url").click(function(){
+	    theURL = jQuery("#link_file").val();
+	    if (theURL != null) { 
+	      wym._exec('CreateLink', theURL);
+	      jQuery("#link_dialog").dialog("close");
+	    }
+	  });
     jQuery("#link_dialog").dialog("open");
     return false;
   });
